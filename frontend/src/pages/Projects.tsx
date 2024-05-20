@@ -4,6 +4,7 @@ import type { TabsProps } from 'antd';
 import { useThemeStore } from '../Store/ThemeManagement'
 import { PersonalProject } from '../components/ProjectSection/PersonalProject';
 import { DesignProject } from '../components/ProjectSection/DesignProject';
+import { OtherProjects } from '../components/ProjectSection/OtherProjects';
 export const Projects:React.FC = () => {
 
   const isDark = useThemeStore(state => state.isDark)
@@ -20,10 +21,10 @@ export const Projects:React.FC = () => {
         children: <DesignProject />,
     },
     {
-        key: '3',
-        label: <p>Collaboration Project</p>,
-        children: 'Testing',
-    },
+      key: '3',
+      label: <p>Other Projects</p>,
+      children: <OtherProjects />,
+    }
   ];
   return (
     <ConfigProvider
