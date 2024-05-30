@@ -13,27 +13,27 @@ export const Frontend:React.FC = () => {
     const languageData = [
         {
             title: 'HTML',
-            icon: <IoLogoHtml5 className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <IoLogoHtml5 className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Advanced'
         },
         {
             title: 'CSS',
-            icon: <FaCss3Alt className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <FaCss3Alt className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'React',
-            icon: <FaReact className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <FaReact className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Boostrap',
-            icon: <FaBootstrap className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <FaBootstrap className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Tailwindcss',
-            icon: <SiTailwindcss className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiTailwindcss className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         }]
 

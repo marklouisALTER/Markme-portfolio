@@ -34,7 +34,7 @@ export const Certificate:React.FC = () => {
                 components: {
                 Tabs: {
                     itemColor: isDark ? '#fff' : '#fff',
-                    itemHoverColor: '#0d47a1',
+                    itemHoverColor: '#2761ba',
                     colorBgBase: '#fff',
                 },
                 },
@@ -62,3 +62,5 @@ export const Certificate:React.FC = () => {
         </ConfigProvider>
     )
 }
+
+export default Certificate;

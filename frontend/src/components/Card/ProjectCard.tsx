@@ -17,20 +17,19 @@ type projectCardPropType = {
 }
 
 type projectCardType = {
-    key: number;
     project: projectCardPropType;
 }
 
-export const ProjectCard:React.FC<projectCardType> = ({key, project}) => {
+export const ProjectCard:React.FC<projectCardType> = ({project}) => {
 
     const isDark = useThemeStore(state => state.isDark);
 
 
 
   return (
-    <article key={key} className={`group border rounded-lg flex flex-col gap-3 items-center
-    transition-all delay-50 ease-in-out hover:cursor-pointer p-3 group hover:scale-105 shadow shadow-spread-md
-    ${isDark ? 'border-white hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>
+    <article className={`group rounded-lg flex flex-col gap-3 items-center
+    transition-all delay-50 ease-in-out hover:cursor-pointer p-3 group hover:scale-105 shadow-xl shadow-spread-xl
+    ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>
         <div key={project.id} className='w-full flex flex-col gap-2'>
             <Image
                 src={project.image}

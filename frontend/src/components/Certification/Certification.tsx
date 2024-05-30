@@ -17,6 +17,7 @@ import { Image } from 'antd'
 import { useThemeStore } from '../../Store/ThemeManagement'
 
 type sampleDataCert = {
+    id: number
     title: string;
     description: string;
     provider: string;
@@ -37,6 +38,7 @@ export const Certification:React.FC = () => {
     const dataSample: CertificationProps = {
         data: [
             {
+                id: 1,
                 title: 'SQL Associate Certificate',
                 description: `Mastering the power of structured query language (SQL). with DataCamp Certification
                 This certification signifies my proficiency in leveraging sql to extract and analyze data from any database.
@@ -50,6 +52,7 @@ export const Certification:React.FC = () => {
                 credential_link: 'https://www.datacamp.com/certificate/SQA0019952077107'
             },
             {
+                id:2,
                 title: 'React Certificate',
                 description: `This certification validates mastery in constructing web applications utilizing React, a 
                 premier JavaScript library. Encompassing fundamental topics such as React Components, Props, State, 
@@ -67,6 +70,7 @@ export const Certification:React.FC = () => {
                 credential_link: 'https://www.coursera.org/account/accomplishments/verify/PQ8T4E4RXJ56'
             },
             {
+                id:3,
                 title: 'Data Engineer Course',
                 description: `This course is designed to provide a comprehensive understanding of data engineering, 
                 including the principles of data management, data processing, and data analysis. 
@@ -79,6 +83,7 @@ export const Certification:React.FC = () => {
                 date: 'January'
             },
             {
+                id:4,
                 title: 'Backend Web Development',
                 description: `This course spans 15 days, with daily sessions of 5 hours each, focused on backend web development. 
                 This course covers the basics of backend web development, including the use of databases, 
@@ -95,6 +100,7 @@ export const Certification:React.FC = () => {
                 date: 'January 2023'
             },
             {
+                id:5,
                 title: 'Javascript Training',
                 description: `This course also spans 15 days, with daily sessions of 5 hours each, focused on JavaScript programming.
                 This course covers the basics of JavaScript programming, including the use of variables, data types, functions, and etc.
@@ -103,6 +109,7 @@ export const Certification:React.FC = () => {
                 date: 'April 2023'
             },
             {
+                id:6,
                 title: 'Networking Essential Certificate',
                 description: `This course is designed to provide a comprehensive understanding of networking essentials, 
                 including the principles of networking, network security, and network management. As you can see in the image, 
@@ -112,6 +119,7 @@ export const Certification:React.FC = () => {
                 date: 'June 2023'
             },
             {
+                id:7,
                 title: 'Introduction to Cisco Packet Tracer',
                 description: `This course is introduction to Cisco Packet Tracer how to use the application interface 
                 and how to use the tools in the application. This course is a prerequisite for the Networking Essential 
@@ -188,16 +196,16 @@ export const Certification:React.FC = () => {
         <div className='w-[100%] px-5'>
         {
             dataSample?.data.map((data, index) => (
-                <div className={`${currentSlide === index ? 'block': 'hidden'}`}>
+                <div key={data.id} className={`${currentSlide === index ? 'block': 'hidden'}`}>
                     <h2 className={`text-2xl font-karla font-extrabold 
                         ${isDark ? 'text-brand-primary' : 'text-white'}`}>
                             {data.title}
                     </h2>
                     <div className='flex justify-between mt-2'>
-                        <h5 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.provider}</h5>
+                        <h3 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.provider}</h3>
                         <div className='flex gap-2'>
                             <ClockCircleOutlined className={`${isDark ? 'text-brand-primary' : 'text-gray-300'}`} />
-                            <h5 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.date}</h5>
+                            <h4 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.date}</h4>
                         </div>
                     </div>
                     <p className={`mt-5 font-ubuntu md:text-lg font-medium ${isDark ? 'text-gray-400' : 'text-gray-200'}`}>
@@ -212,7 +220,7 @@ export const Certification:React.FC = () => {
                             <a 
                                 href={data.credential_link} 
                                 target='_blank' rel='noreferrer' 
-                                className={`font-ubuntu md:text-lg font-medium cursor-pointer ${isDark ? 'text-brand-primary': 'text-blue-400'}`}>
+                                className={`font-ubuntu md:text-lg font-medium cursor-pointer ${isDark ? 'text-white': 'text-blue-400'}`}>
                                 View Credential
                             </a>
                         )

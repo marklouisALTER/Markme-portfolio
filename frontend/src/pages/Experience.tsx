@@ -13,7 +13,7 @@ import { FaBootstrap } from "react-icons/fa6";
 import { BiLogoTailwindCss } from "react-icons/bi";
 
 
-export const Experience:React.FC = () => {
+const Experience:React.FC = () => {
 
     const isDark = useThemeStore(state => state.isDark)
 
@@ -130,3 +130,5 @@ export const Experience:React.FC = () => {
         </ConfigProvider>
   )
 }
+
+export default Experience;

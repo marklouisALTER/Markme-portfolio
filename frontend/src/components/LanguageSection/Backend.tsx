@@ -15,32 +15,32 @@ export const Backend:React.FC = () => {
     const languageData = [
         {
             title: 'Node.js',
-            icon: <FaNode  className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <FaNode  className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Express.js',
-            icon: <SiExpress className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiExpress className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Php',
-            icon: <SiPhp className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiPhp className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Javascript',
-            icon: <IoLogoJavascript className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <IoLogoJavascript className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Flask',
-            icon: <SiFlask className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiFlask className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         },
         {
             title: 'Jquery',
-            icon: <DiJqueryLogo className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <DiJqueryLogo className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         }
     ]

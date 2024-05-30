@@ -11,7 +11,7 @@ const Home:React.FC = () => {
     <section 
       id="home" 
       className={`w-full h-screen flex items-center justify-center px-10 md:px-20 lg:px-30 xl:px-40 
-      transition-all delay-50 ease-in-out ${isDark ? 'bg-slate-800' : 'bg-white'}`}
+      transition-all delay-50 ease-in-out ${isDark ? 'bg-slate-800' : 'bg-[#f5f6fa]'}`}
     >
       <div className='grid grid-cols-1 lg:grid-cols-2 w-full h-full'>
         <div className='flex items-center'>

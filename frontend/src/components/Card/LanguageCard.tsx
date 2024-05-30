@@ -18,22 +18,22 @@ export const LanguageCard:React.FC<cardProps> = ({
 
   return (
     <article 
-        className={`group border rounded-lg flex flex-col gap-3 justify-center items-center
-        transition-all delay-50 ease-in-out hover:cursor-pointer py-7 
-        ${isDark ? 'border-brand-secondary hover:bg-brand-primary ' : 'bg-brand-secondary hover:bg-brand-primary'}`}>
+        className={`group rounded-lg flex flex-col gap-3 justify-center items-center
+        transition-all delay-50 ease-in-out hover:cursor-pointer py-7 hover:scale-105
+        ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>
         {icon}
         
         <div className='flex flex-col items-center justify-center'>
-            <h6 
+            <h3 
                 className={`text-xl font-karla 
                     ${isDark ? 'group-hover:text-white text-white' : 
                     'group-hover:text-white text-white'}`}
             >
                         {title}
-            </h6>
+            </h3>
             <small 
                 className={`text-gray-400 text-xs font-ubuntu 
-                    ${isDark ? 'group-hover:text-gray-300' : 
+                    ${isDark ? 'group-hover:text-[#101d2e]' : 
                     'group-hover:text-gray-200 text-white'}`}
             >
                         {proficiency}

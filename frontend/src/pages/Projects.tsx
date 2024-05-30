@@ -5,7 +5,8 @@ import { useThemeStore } from '../Store/ThemeManagement'
 import { PersonalProject } from '../components/ProjectSection/PersonalProject';
 import { DesignProject } from '../components/ProjectSection/DesignProject';
 import { OtherProjects } from '../components/ProjectSection/OtherProjects';
-export const Projects:React.FC = () => {
+
+const Projects:React.FC = () => {
 
   const isDark = useThemeStore(state => state.isDark)
 
@@ -32,7 +33,7 @@ export const Projects:React.FC = () => {
                 components: {
                 Tabs: {
                     itemColor: isDark ? '#fff' : 'rgb(107 114 128)',
-                    itemHoverColor: '#0d47a1',
+                    itemHoverColor: '#2761ba',
                     colorBgBase: '#fff',
                 },
                 },
@@ -40,7 +41,7 @@ export const Projects:React.FC = () => {
         >
           
         <section
-            id="certificate"
+            id="projects"
             className={`w-full transition-all delay-50 ease-in-out ${
                 isDark ? 'bg-slate-800' : 'bg-white'
             } px-10 md:px-20 lg:px-30 xl:px-40 py-20`}
@@ -59,3 +60,5 @@ export const Projects:React.FC = () => {
     </ConfigProvider>
   )
 }
+
+export default Projects;
