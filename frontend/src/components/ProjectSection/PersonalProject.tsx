@@ -14,7 +14,7 @@ export const PersonalProject:React.FC = () => {
         {
             id: 1,
             title: 'Meme Generator',
-            stack: ['React JS', 'Vite', 'Tailwind'],
+            stack: ['React', 'JS', 'Vite', 'Tailwind'],
             image: meme_generator,
             links: {
                 view: '',
@@ -24,7 +24,7 @@ export const PersonalProject:React.FC = () => {
         {
             id: 2,
             title: 'Inventory Management',
-            stack: ['Php', 'Bootstrap', 'JS', 'Ajax', 'MySQL'],
+            stack: ['Php', 'Bootstrap', 'JS', 'MySQL'],
             image: inventory_website,
             links: {
                 view: '',
@@ -34,7 +34,7 @@ export const PersonalProject:React.FC = () => {
         {
             id: 3,
             title: 'Face Recognition Attendance',
-            stack: ['React TS', 'Vite', 'Tailwind', 'Flask', 'Zustand', 'MySQL'],
+            stack: ['React', 'TS', 'Vite', 'Tailwind', 'Flask', 'MySQL'],
             image: face_recognition,
             links: {
                 view: '',
@@ -44,7 +44,7 @@ export const PersonalProject:React.FC = () => {
         {
             id: 4,
             title: 'Travel Reservation Website',
-            stack: ['Php', 'Bootstrap', 'JS', 'Ajax', 'MySQL'],
+            stack: ['Php', 'Bootstrap', 'JS', 'MySQL'],
             image: travel_website,
             links: {
                 view: '',
@@ -54,7 +54,7 @@ export const PersonalProject:React.FC = () => {
         {
             id: 5,
             title: 'Receipt Generator Mangement',
-            stack: ['React TS', 'Vite', 'Tailwind', 'Zustand', 'NodeJS', 'MySQL', 'Express'],
+            stack: ['React', 'TS', 'Vite', 'Tailwind', 'NodeJS', 'MySQL', 'Express'],
             image: receipt_website,
             links: {
                 view: '',
