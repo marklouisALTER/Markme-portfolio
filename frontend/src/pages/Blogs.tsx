@@ -58,7 +58,7 @@ const Blogs:React.FC = () => {
                 <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {arrayData.map((data, index) => (
                         <article key={index} className='mt-5'>
-                            <div className={`shadow-xl shadow-spead-xl transition-all delay-50 ease-in-out rounded-md hover:scale-105
+                            <div className={`cursor-pointer shadow-xl shadow-spead-xl transition-all delay-50 ease-in-out rounded-md hover:scale-105
                                 ${isDark ? 'bg-[#101d2e] text-gray-300' : 'bg-white text-gray-700'}
                                 `}>
                                 <div className='w-full rounded-t-md'>

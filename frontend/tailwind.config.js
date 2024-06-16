@@ -6,6 +6,15 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        fadeInOut: {
+          '0%, 100%': { opacity: '0.3' },
+          '50%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'fade-in-out': 'fadeInOut 3s infinite',
+      },
       fontFamily: {
         'ubuntu': ['Ubuntu', 'san-serif'],
         'karla' : ['Karla', 'sans-serif']

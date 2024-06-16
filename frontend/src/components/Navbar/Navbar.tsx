@@ -1,17 +1,17 @@
 import React from 'react'
-import{ Switch } from 'antd'
+// import{ Switch } from 'antd'
 import logo from '../../assets/images/favicon.png'
 import { useThemeStore } from '../../Store/ThemeManagement'
 
 const Navbar:React.FC = () => {
 
-    const {updateTheme, isDark} = useThemeStore();
+    const {isDark} = useThemeStore();
 
     return(
         <>
         <nav 
-            className={`w-full border-b py-5 flex items-center justify-between fixed backdrop-blur-xl transition-all 
-            delay-50 ease-in-out px-10 md:px-20 lg:px-30 xl:px-40 z-[5] ${isDark ? 'bg-slate-800 border-transparent': 'border-[#e5e9f2] bg-white'}`}>
+            className={`w-full border-b py-5 flex items-center justify-between fixed transition-all bg-transparent
+            delay-50 ease-in-out px-10 md:px-20 lg:px-30 xl:px-40 z-[5] ${isDark ? ' border-transparent': 'border-[#e5e9f2]'}`}>
             <a 
                 href="/"
                 className='flex items-center gap-2'>
@@ -84,13 +84,13 @@ const Navbar:React.FC = () => {
                     Login
                 </button>
 
-                <Switch 
+                {/* <Switch 
                     size='default'
                     style={{ backgroundColor: '#adb5bd'}}
                     onClick={updateTheme}
                     checkedChildren="🌙"
                     unCheckedChildren="🌞"
-                />
+                /> */}
             </div>
         </nav>
        
