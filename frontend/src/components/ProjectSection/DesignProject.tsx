@@ -52,8 +52,8 @@ export const DesignProject:React.FC = () => {
         data.map((item) => (
           <div 
             key={item.id} 
-            className={`flex flex-col gap-1 p-2 border rounded-lg hover:scale-105 transition-all delay-100 ease-in-out 
-            justify-center ${isDark ? 'border-white': 'border-brand-primary bg-brand-primary'}`}
+            className={`flex flex-col gap-1 p-3 rounded-lg hover:scale-105 transition-all delay-100 ease-in-out 
+            justify-center ${isDark ? 'bg-[#101d2e]': 'border-brand-primary bg-brand-primary'}`}
           >
             <Image 
               src={item.image} 

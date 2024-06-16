@@ -39,9 +39,9 @@ export const OtherProjects: React.FC = () => {
         <div className='w-full grid grid-cols-2 mt-5 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             {
                 OtherProject.map((project, index) => (
-                    <article key={index} className={`relative group border rounded-lg flex flex-col gap-3
+                    <article key={index} className={`relative group rounded-lg flex flex-col gap-3
                         transition-all delay-50 ease-in-out hover:cursor-pointer p-3 group hover:scale-105 shadow shadow-spread-md
-                        ${isDark ? 'border-white hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}
+                        ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}
 
                     >
                         <div className='flex flex-col lg:flex-row gap-3'>
@@ -67,7 +67,7 @@ export const OtherProjects: React.FC = () => {
                         <p className='hidden sm:flex font-karla text-white text-xs md:text-sm lg:text-[15px]'>
                             {project.summary}
                         </p>
-                        <div className='absolute hidden w-full h-full group-hover:flex blur-sm bg-black opacity-50 rounded-lg top-0 left-0 z-[5]'></div>
+                        <div className='absolute hidden w-full h-full group-hover:flex bg-black opacity-50 rounded-lg top-0 left-0 z-[5]'></div>
                         <div className='absolute hidden w-full h-full top-0 left-0 group-hover:flex items-center justify-center z-[10]'>
                             <Tooltip title='View'>
                                 <a href={project.link} target='_blank' rel='noreferrer'>

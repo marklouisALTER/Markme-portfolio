@@ -6,7 +6,7 @@ import { Frontend } from '../components/LanguageSection/Frontend';
 import { Backend } from '../components/LanguageSection/Backend';
 import { Database } from '../components/LanguageSection/Database';
 
-export const Language: React.FC = () => {
+const Language: React.FC = () => {
     const isDark = useThemeStore((state) => state.isDark);
 
     const items: TabsProps['items'] = [
@@ -33,7 +33,7 @@ export const Language: React.FC = () => {
                 components: {
                 Tabs: {
                     itemColor: isDark ? '#fff' : 'rgb(107 114 128)',
-                    itemHoverColor: '#0d47a1',
+                    itemHoverColor: '#2761ba',
                     colorBgBase: '#fff',
                 },
                 },
@@ -46,8 +46,8 @@ export const Language: React.FC = () => {
                 } px-10 md:px-20 lg:px-30 xl:px-40 py-20`}
             >
                 <div className="flex flex-col justify-center items-center">
-                    <p className={`font-ubuntu ${isDark ? 'text-gray-400': 'text-gray-500'}`}>Language/Stack that i use</p>
-                    <h3 className={`font-ubuntu text-3xl ${isDark ? 'text-brand-primary': 'text-brand-secondary'}`}>I'm familiar with</h3>
+                    <p className={`font-ubuntu ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Language/Stack that I use</p>
+                    <h2 className={`font-ubuntu text-3xl ${isDark ? 'text-blue-500' : 'text-gray-800'}`}>I'm familiar with</h2>
                 </div>
 
                 <Tabs
@@ -60,3 +60,5 @@ export const Language: React.FC = () => {
         </ConfigProvider>
     );
 };
+
+export default Language;

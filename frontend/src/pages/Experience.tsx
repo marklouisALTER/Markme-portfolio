@@ -13,7 +13,7 @@ import { FaBootstrap } from "react-icons/fa6";
 import { BiLogoTailwindCss } from "react-icons/bi";
 
 
-export const Experience:React.FC = () => {
+const Experience:React.FC = () => {
 
     const isDark = useThemeStore(state => state.isDark)
 
@@ -73,7 +73,7 @@ export const Experience:React.FC = () => {
                                 <small className={`font-ubuntu ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Malabon City, Philippines</small>
                                 <div className='flex gap-2'>
                                     <ClockCircleOutlined className={`${isDark ? 'text-brand-primary' : 'text-brand-secondary'}`} />
-                                    <small className={`font-ubuntu font-light ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Febuary 2024 - Present</small>
+                                    <small className={`font-ubuntu font-light ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Febuary 2024 - May 2024</small>
                                 </div>
                             </div>
                             <ul className='mt-2'>
@@ -130,3 +130,5 @@ export const Experience:React.FC = () => {
         </ConfigProvider>
   )
 }
+
+export default Experience;

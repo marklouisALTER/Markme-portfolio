@@ -12,17 +12,17 @@ export const Database:React.FC = () => {
     const languageData = [
         {
             title: 'MySQL',
-            icon: <SiMysql  className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiMysql  className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Advanced'
         },
         {
             title: 'PostgreSQL',
-            icon: <BiLogoPostgresql className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <BiLogoPostgresql className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Advanced'
         },
         {
             title: 'SQLite',
-            icon: <SiSqlite className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-brand-secondary': 'text-brand-primary group-hover:text-brand-secondary'}`}/>,
+            icon: <SiSqlite className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
             proficiency: 'Intermediate'
         }
     ]
