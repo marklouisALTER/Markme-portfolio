@@ -5,6 +5,7 @@ import meme_generator from '../../assets/images/project/meme_generator.png'
 import receipt_website from '../../assets/images/project/receipt_website.png'
 import todo_list from '../../assets/images/project/todo_list.png'
 import travel_website from '../../assets/images/project/travel_website.png'
+import school_management_system from '../../assets/images/project/school_management_system.png'
 import { ProjectCard } from '../Card/ProjectCard';
 
 export const PersonalProject:React.FC = () => {
@@ -66,6 +67,16 @@ export const PersonalProject:React.FC = () => {
             title: 'Todo list',
             stack: ['HTML', 'CSS', 'JS'],
             image: todo_list,
+            links: {
+                view: '',
+                readme: '',
+            }
+        },
+        {
+            id: 8,
+            title: 'School Management System',
+            stack: ['HTML', 'CSS', 'JS', 'Bootstrap', 'MySQL', 'Php'],
+            image: school_management_system,
             links: {
                 view: '',
                 readme: '',
