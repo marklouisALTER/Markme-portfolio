@@ -10,6 +10,11 @@ type activeImgBtnType  = {
     setImgBtnActive: ()=> void,
 }
 
+type activeSidebarBtnType = {
+    isSidebarBtnActive: boolean,
+    setSidebarBtnActive: ()=> void,
+}
+
 export const useActiveListBtnStore = create<activeListBtnType>((set) => ({
     isListBtnActive: true,
     setListBtnActive: () => set((state) => ({isListBtnActive: !state.isListBtnActive}))
@@ -18,4 +23,9 @@ export const useActiveListBtnStore = create<activeListBtnType>((set) => ({
 export const useActiveImgBtnStore = create<activeImgBtnType>((set) => ({
     isImgbtnActive: false,
     setImgBtnActive: () => set((state) => ({isImgbtnActive: !state.isImgbtnActive}))
+}))
+
+export const useActiveSidebarBtnStore = create<activeSidebarBtnType>((set) => ({
+    isSidebarBtnActive: false,
+    setSidebarBtnActive: () => set((state) => ({isSidebarBtnActive:!state.isSidebarBtnActive}))
 }))
