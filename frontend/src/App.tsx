@@ -4,6 +4,7 @@ import { Footer } from './pages/Footer';
 import { Login } from './pages/Login';
 import { Layout } from './layout/Layout';
 
+const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 const Navbar = lazy(() => import('./components/Navbar/Navbar'));
 const Home = lazy(() => import('./pages/Home'));
 const Language = lazy(() => import('./pages/Language'));
@@ -37,6 +38,7 @@ function App() {
           <Route path='/login' element={<Layout />} >
             <Route index element={<Login />} />
           </Route>
+          <Route path='*' element={<PageNotFound />} /> 
         </Routes>
       </Suspense>
     </Router>
