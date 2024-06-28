@@ -13,6 +13,8 @@ const Navbar:React.FC = () => {
     return(
         <>
         <nav 
+            data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+            data-aos-delay="100"
             className={`w-full border-b py-5 flex items-center justify-between fixed transition-all bg-[#101d2e]
             delay-50 ease-in-out px-10 md:px-20 lg:px-30 xl:px-40 z-[5] ${isDark ? ' border-transparent': 'border-[#e5e9f2]'}`}>
             <a 
@@ -27,6 +29,8 @@ const Navbar:React.FC = () => {
                     
             <div className="hidden md:flex items-center gap-5">
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="150"
                     href="#home"
                     className={`font-medium font-karla text-sm lg:text-[17px] border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -41,6 +45,8 @@ const Navbar:React.FC = () => {
                         Tools
                 </a> */}
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="200"
                     href="#language"
                     className={`font-medium font-karla text-sm lg:text-[17px]  border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -48,6 +54,8 @@ const Navbar:React.FC = () => {
                         Language
                 </a>
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="250"
                     href="#experience"
                     className={`font-medium font-karla text-sm lg:text-[17px]  border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -56,6 +64,8 @@ const Navbar:React.FC = () => {
                 </a>
                 
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
                     href="#certificate"
                     className={`font-medium font-karla text-sm lg:text-[17px]  border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -63,6 +73,8 @@ const Navbar:React.FC = () => {
                         Certificates
                 </a>
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="350"
                     href="#projects"
                     className={`font-medium font-karla text-sm lg:text-[17px]  border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -70,6 +82,8 @@ const Navbar:React.FC = () => {
                         Projects
                 </a>
                 <a 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="400"
                     href="#blogs"
                     className={`font-medium font-karla text-sm lg:text-[17px]  border-b-2 border-transparent transition-all delay-50 ease-in-out 
                     ${isDark ? 'text-white hover:border-white': 'hover:text-brand-primary hover:border-brand-primary'}`}
@@ -78,6 +92,8 @@ const Navbar:React.FC = () => {
                 </a>
                 
                 <button 
+                    data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                    data-aos-delay="450"
                     onClick={() => window.location.href = '/login'}
                     className={`p-1 px-7 rounded-lg font-karla transition-all delay-50 ease-in-out focus:outline-none
                     focus:ring-2 focus:ring-brand-secondary focus:ring-offset-2 border border-transparent

@@ -6,6 +6,10 @@ import { useThemeStore } from '../Store/ThemeManagement'
 import { BsFillSendFill } from "react-icons/bs";
 import { useActiveMailModalBtnStore } from '../Store/ActiveButton';
 import { EmailModal } from '../components/Modal/EmailModal';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Home:React.FC = () => {
 
@@ -22,14 +26,14 @@ const Home:React.FC = () => {
           <div className='flex flex-col gap-5'>
             <div className='flex flex-col gap-1'>
               <div>
-                <h3 className={`font-ubuntu font-medium md:text-xl text-center lg:text-start
+                <h3 data-aos="fade-right" className={`font-ubuntu font-medium md:text-xl text-center lg:text-start
                   ${isDark ? 'text-white': 'text-black'}`}>Hello There, I'm
                 </h3>
-                <h1 className='font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'>Mark Louis A. Bernardo</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1000" className='font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'>Mark Louis A. Bernardo</h1>
               </div>
-              <p className={`font-ubuntu font-medium text-center lg:text-start ${isDark ? 'text-gray-200': 'text-black'}`}>WEB DEVELOPER</p>
+              <p data-aos="fade-right" data-aos-duration="1300" className={`font-ubuntu font-medium text-center lg:text-start ${isDark ? 'text-gray-200': 'text-black'}`}>WEB DEVELOPER</p>
             </div>
-            <p className={`font-ubuntu font-extralight text-center lg:text-start ${isDark ? 'text-gray-300': 'text-gray-900'}`}> 
+            <p data-aos="fade-right" data-aos-duration="1500" className={`font-ubuntu font-extralight text-center lg:text-start ${isDark ? 'text-gray-300': 'text-gray-900'}`}> 
               Greetings, I am Mark Louis A. Bernardo, a dedicated web developer with specialization in React and Node.js. 
               Additionally, I am actively engaged in continuous learning within the realm of data. 
               My commitment to excellence is reflected in my work, where I aim to create impactful and innovative solutions. 
@@ -37,9 +41,11 @@ const Home:React.FC = () => {
             </p>
             <div className='flex items-center justify-center lg:justify-start'>
               <button 
+                data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="700"
                 onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
-                focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group
+                focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group rounded-xl
                 ${isDark ? 'bg-transparent border-2 border-l-transparent hover:border-l-brand-primary hover:bg-[#1a202c] text-white': 
                 'bg-brand-primary border-brand-primary hover:bg-brand-secondary hover:border-brand-secondary text-white'}`}
               >
@@ -55,14 +61,20 @@ const Home:React.FC = () => {
         </div>
         <div className='flex items-end lg:items-center justify-center order-[1] lg:order-[2]'>
           <div className='relative w-full flex justify-center'>
-            <div className='w-52 h-52 md:h-80 md:w-80 rounded-full overflow-hidden z-[2] border-4 border-white shadow-xl shadow-spread-xl'>
+            <div 
+                data-aos="fade-left"
+                data-aos-delay="600"
+                className='w-52 h-52 md:h-80 md:w-80 rounded-full overflow-hidden z-[2] border-4 border-white shadow-xl shadow-spread-xl'>
               <Image 
                 src={profilePicture} 
                 alt='Mark Louis A. Bernardo picture' 
                 className='w-full h-full object-cover object-center'
                 />
             </div>
-            <div className='hidden lg:flex absolute bg-brand-primary w-80 h-80 top-14 right-10 rounded-full'></div>
+            <div 
+                data-aos="fade-left"
+                data-aos-delay="500"
+                className='hidden lg:flex absolute bg-brand-primary w-80 h-80 top-14 right-10 rounded-full'></div>
           </div>
         </div>
       </div>
