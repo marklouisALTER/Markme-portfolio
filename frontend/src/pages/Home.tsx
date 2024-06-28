@@ -1,13 +1,16 @@
 import { Image } from 'antd'
 import React from 'react'
 import profilePicture from '../assets/images/MarkmeFormal.jpeg'
+// import markme_profile from '../assets/images/markme-image.png'
 import { useThemeStore } from '../Store/ThemeManagement'
 import { BsFillSendFill } from "react-icons/bs";
+import { useActiveMailModalBtnStore } from '../Store/ActiveButton';
+import { EmailModal } from '../components/Modal/EmailModal';
 
 const Home:React.FC = () => {
 
     const isDark = useThemeStore(state => state.isDark)
-
+    const { setMailModalBtnActive, isMailModalBtnActive } = useActiveMailModalBtnStore();
   return (
     <section 
       id="home" 
@@ -34,6 +37,7 @@ const Home:React.FC = () => {
             </p>
             <div className='flex items-center justify-center lg:justify-start'>
               <button 
+                onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
                 focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group
                 ${isDark ? 'bg-transparent border-2 border-l-transparent hover:border-l-brand-primary hover:bg-[#1a202c] text-white': 
@@ -68,6 +72,9 @@ const Home:React.FC = () => {
       <div className='w-[100px] h-[100px] absolute bg-brand-secondary rounded-full top-[50px] right-[50%] blur-lg opacity-50'></div>
       <div className='w-[50px] h-[50px] absolute bg-brand-secondary rounded-full bottom-[40%] right-[10%] blur-lg opacity-30'></div>
       <div className='w-[300px] h-[300px] absolute bg-brand-secondary rounded-full bottom-[10%] right-[40%] blur-lg opacity-30'></div>
+      {
+        isMailModalBtnActive && <EmailModal />
+      }
     </section>
   )
 }
