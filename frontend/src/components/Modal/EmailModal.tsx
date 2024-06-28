@@ -3,7 +3,7 @@ import { useActiveMailModalBtnStore } from '../../Store/ActiveButton';
 import { ConfigProvider, Modal } from 'antd';
 import { Typography } from 'antd';
 
-const { Paragraph, Text } = Typography;
+const { Paragraph } = Typography;
 
 export const EmailModal:React.FC = () => {
 
