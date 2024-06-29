@@ -14,27 +14,32 @@ export const Frontend:React.FC = () => {
         {
             title: 'HTML',
             icon: <IoLogoHtml5 className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Advanced'
+            proficiency: 'Advanced',
+            delay: 700
         },
         {
             title: 'CSS',
             icon: <FaCss3Alt className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Intermediate'
+            proficiency: 'Intermediate',
+            delay: 800
         },
         {
             title: 'React',
             icon: <FaReact className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Intermediate'
+            proficiency: 'Intermediate',
+            delay: 900
         },
         {
             title: 'Boostrap',
             icon: <FaBootstrap className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Intermediate'
+            proficiency: 'Intermediate',
+            delay: 1000
         },
         {
             title: 'Tailwindcss',
             icon: <SiTailwindcss className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Intermediate'
+            proficiency: 'Intermediate',
+            delay: 1100
         }]
 
 
@@ -46,7 +51,7 @@ export const Frontend:React.FC = () => {
         <div className='mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                 {languageData.map((tool, index) => (
                     <LanguageCard
-                        key={index} title={tool.title} icon={tool.icon} proficiency={tool.proficiency}/>
+                        key={index} title={tool.title} icon={tool.icon} proficiency={tool.proficiency} delay={tool.delay}/>
                 ))}
             </div>
     </section>

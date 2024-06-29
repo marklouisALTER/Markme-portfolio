@@ -13,17 +13,20 @@ export const Database:React.FC = () => {
         {
             title: 'MySQL',
             icon: <SiMysql  className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Advanced'
+            proficiency: 'Advanced',
+            delay: 700
         },
         {
             title: 'PostgreSQL',
             icon: <BiLogoPostgresql className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Advanced'
+            proficiency: 'Advanced',
+            delay: 800
         },
         {
             title: 'SQLite',
             icon: <SiSqlite className={`text-6xl ${isDark ? 'text-brand-primary group-hover:text-[#101d2e]': 'text-white'}`}/>,
-            proficiency: 'Intermediate'
+            proficiency: 'Intermediate',
+            delay: 900
         }
     ]
 
@@ -35,7 +38,7 @@ export const Database:React.FC = () => {
         <div className='mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>
                 {languageData.map((tool, index) => (
                     <LanguageCard
-                        key={index} title={tool.title} icon={tool.icon} proficiency={tool.proficiency}/>
+                        key={index} title={tool.title} icon={tool.icon} proficiency={tool.proficiency} delay={tool.delay}/>
                 ))}
             </div>
     </section>
