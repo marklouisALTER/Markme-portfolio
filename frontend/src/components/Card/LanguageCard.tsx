@@ -5,19 +5,24 @@ type cardProps = {
     icon: JSX.Element;
     title: string;
     proficiency: string;
+    delay: number;
 }
 
 
 export const LanguageCard:React.FC<cardProps> = ({
     title,
     icon,
-    proficiency
+    proficiency,
+    delay
 }) => {
 
     const isDark = useThemeStore(state => state.isDark);
 
   return (
     <article 
+        data-aos="fade-up"
+        data-aos-delay={delay}
+        data-aos-anchor-placement="top-bottom" 
         className={`group rounded-lg flex flex-col gap-3 justify-center items-center
         transition-all delay-50 ease-in-out hover:cursor-pointer py-7 hover:scale-105
         ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>

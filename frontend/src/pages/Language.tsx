@@ -12,17 +12,29 @@ const Language: React.FC = () => {
     const items: TabsProps['items'] = [
         {
             key: '1',
-            label: <p>Frontend</p>,
+            label: <p
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-anchor-placement="top-bottom" 
+                >Frontend</p>,
             children: <Frontend />,
         },
         {
             key: '2',
-            label: <p>Backend</p>,
+            label: <p
+                data-aos="fade-right"
+                data-aos-delay="500"
+                data-aos-anchor-placement="top-bottom" 
+                >Backend</p>,
             children: <Backend />,
         },
         {
             key: '3',
-            label: <p>Database</p>,
+            label: <p
+                data-aos="fade-right"
+                data-aos-delay="600"
+                data-aos-anchor-placement="top-bottom" 
+                >Database</p>,
             children: <Database />,
         },
     ];
@@ -46,11 +58,23 @@ const Language: React.FC = () => {
                 } px-10 md:px-20 lg:px-30 xl:px-40 py-20`}
             >
                 <div className="flex flex-col justify-center items-center">
-                    <p className={`font-ubuntu ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>Language/Stack that I use</p>
-                    <h2 className={`font-ubuntu text-3xl ${isDark ? 'text-blue-500' : 'text-gray-800'}`}>I'm familiar with</h2>
+                    <p 
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                        data-aos-anchor-placement="top-bottom" 
+                        className={`font-ubuntu ${isDark ? 'text-gray-300' : 'text-gray-7000'}`}>Language/Stack that I use</p>
+
+                    <h2
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                        data-aos-anchor-placement="top-bottom" 
+                        className={`font-ubuntu text-3xl ${isDark ? 'text-blue-500' : 'text-gray-800'}`}>I'm familiar with</h2>
                 </div>
 
                 <Tabs
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-anchor-placement="top-bottom" 
                     className="mt-10"
                     centered={true}
                     items={items}
