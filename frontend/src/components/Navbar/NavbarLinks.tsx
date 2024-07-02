@@ -14,7 +14,7 @@ const NavbarLinks:React.FC = () => {
             className={`w-full border-b py-5 flex items-center justify-between fixed backdrop-blur-xl transition-all 
             delay-50 ease-in-out px-10 md:px-20 lg:px-30 xl:px-40 z-[5] ${isDark ? 'bg-slate-800 border-transparent': 'border-[#e5e9f2] bg-white'}`}>
             <NavLink
-                to="/"
+                to="/#home"
                 className='flex items-center gap-2'>
                 <img 
                     src={logo} 
