@@ -22,7 +22,7 @@ const Home:React.FC = () => {
       transition-all delay-50 ease-in-out overflow-hidden ${isDark ? 'bg-slate-800' : 'bg-[#f5f6fa]'}`}
     >
       <div className='grid grid-cols-1 lg:grid-cols-2 w-full h-full'>
-        <div className='flex items-start mt-10 md:items-center md:mt-0 order-[2] lg:order-[1]'>
+        <div className='flex justify-center mt-10 md:items-center md:mt-0 order-[2] lg:order-[1]'>
           <div className='flex flex-col gap-5'>
             <div className='flex flex-col gap-1'>
               <div>
@@ -31,9 +31,9 @@ const Home:React.FC = () => {
                 </h3>
                 <h1 data-aos="fade-right" data-aos-duration="1000" className='font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'>Mark Louis A. Bernardo</h1>
               </div>
-              <p data-aos="fade-right" data-aos-duration="1300" className={`font-ubuntu font-medium text-center lg:text-start ${isDark ? 'text-gray-200': 'text-black'}`}>WEB DEVELOPER</p>
+              <p data-aos="fade-right" data-aos-duration="1300" className={`font-ubuntu text-xl font-medium text-center lg:text-start ${isDark ? 'text-gray-200': 'text-black'}`}>Front-End Web Developer</p>
             </div>
-            <p data-aos="fade-right" data-aos-duration="1500" className={`font-ubuntu font-extralight text-center lg:text-start ${isDark ? 'text-gray-300': 'text-gray-900'}`}> 
+            <p data-aos="fade-right" data-aos-duration="1500" className={`hidden md:flex font-ubuntu font-extralight text-center lg:text-start ${isDark ? 'text-gray-300': 'text-gray-900'}`}> 
               Greetings, I am Mark Louis A. Bernardo, a dedicated web developer with specialization in React and Node.js. 
               Additionally, I am actively engaged in continuous learning within the realm of data. 
               My commitment to excellence is reflected in my work, where I aim to create impactful and innovative solutions. 
@@ -45,7 +45,7 @@ const Home:React.FC = () => {
                 data-aos-delay="700"
                 onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
-                focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group rounded-xl
+                focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group rounded-xl z-[5]
                 ${isDark ? 'bg-transparent border-2 border-l-transparent hover:border-l-brand-primary hover:bg-[#1a202c] text-white': 
                 'bg-brand-primary border-brand-primary hover:bg-brand-secondary hover:border-brand-secondary text-white'}`}
               >

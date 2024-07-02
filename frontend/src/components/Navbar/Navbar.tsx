@@ -18,7 +18,7 @@ const Navbar:React.FC = () => {
             className={`w-full border-b py-5 flex items-center justify-between fixed transition-all bg-[#101d2e]
             delay-50 ease-in-out px-10 md:px-20 lg:px-30 xl:px-40 z-[5] ${isDark ? ' border-transparent': 'border-[#e5e9f2]'}`}>
             <a 
-                href="/"
+                href="/#home"
                 className='flex items-center gap-2'>
                 <img 
                     src={logo} 
