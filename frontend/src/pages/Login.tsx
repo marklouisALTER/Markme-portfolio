@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useThemeStore } from '../Store/ThemeManagement';
 import login_background from '../assets/images/picture/login_background.png'
 import logoIcon from '../assets/images/favicon.png'
 import { Checkbox } from 'antd';
+// import { useToast } from '@/components/ui/use-toast';
 
+type submitType = {
+    username: string;
+    password: string;
+    remember: boolean;
+}
 
 export const Login:React.FC = () => {
 
     const isDark = useThemeStore(state => state.isDark);
+    const [form, setForm] = useState<submitType>({
+        username: '',
+        password: '',
+        remember: false,
+    })
+
+    const onSubmit = () => {
+        console.log(form);
+    }
 
   return (
     <section
@@ -32,6 +47,7 @@ export const Login:React.FC = () => {
                         id='username'
                         name='username'
                         type='text' 
+                        onChange={(e) => setForm({...form, username: e.target.value})}
                         placeholder='markme19' 
                         className={`w-full p-2 rounded-md focus:outline-none
                         focus:ring-2 ring-brand-primary focus:border-transparent
@@ -44,6 +60,7 @@ export const Login:React.FC = () => {
                         id='password'
                         name='password'
                         type='password' 
+                        onChange={(e) => setForm({...form, password: e.target.value})}
                         placeholder='************' 
                         className={`w-full p-2 rounded-md focus:outline-none
                         focus:ring-2 ring-brand-primary focus:border-transparent
@@ -63,7 +80,9 @@ export const Login:React.FC = () => {
                         <Checkbox 
                             className='bg-transparent'
                             // checked={false}
-                            onChange={(e) => console.log(e.target.checked)}
+                            name='remember'
+                            id='remember'
+                            onChange={(e) => setForm({...form, remember: e.target.value})}
                             
                             >
                             <span className={`font-karla text-sm ${isDark? 'text-gray-300': 'text-gray-700'}`}>Remember me</span>
@@ -73,8 +92,9 @@ export const Login:React.FC = () => {
 
                 <div className='mt-5'>
                     <button 
-                        className={`w-full p-2 border border-brand-primary rounded-md focus:outline-none
-                        focus:ring-2 ring-brand-primary focus:border-transparent
+                        onClick={onSubmit}
+                        className={`w-full p-2 rounded-md focus:outline-none transition-all delay-50 ease-in-out
+                        focus:ring-4 ring-brand-primary/30 focus:border-transparent hover:hover:bg-[#1a202c]
                         ${isDark? 'bg-brand-primary text-white': 'bg-brand-secondary text-white'}`}>
                         Sign in
                     </button>
