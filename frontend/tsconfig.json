@@ -18,7 +18,18 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // Shacdn installation
+    // baseUrl is used to set the base directory for resolving non-relative module names.
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+
+    
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
