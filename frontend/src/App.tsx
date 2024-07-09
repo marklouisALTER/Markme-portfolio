@@ -5,6 +5,7 @@ import { Dashboard } from './pages/dashboard/Dashboard';
 import PageNotFound from './pages/PageNotFound';
 import { Portfolio } from './pages/Portfolio';
 import { AdminLayout } from './layout/AdminLayout';
+import { TodoList } from './pages/dashboard/TodoList';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
         <Route path='/login' element={<Layout />} >
           <Route index element={<Login />} />
         </Route>
-        <Route path='/dashboard' element={<AdminLayout />}>
+        <Route path='admin' element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path='todo-list' element={<TodoList />} />
         </Route>
         <Route path='*' element={<PageNotFound />} /> 
       </Routes>

@@ -13,6 +13,7 @@ export const SidebarNavLink:React.FC<{item:sidebarLinkType[number]}> = ({item}) 
             className={`flex items-center justify-between rounded-md px-2 py-4 duration-300`}>
                 <NavLink
                     to={item.path}
+                    end
                     className={({isActive}) => isActive ? `flex font-karla text-xl w-full px-5 justify-between  
                     items-center bg-brand-primary text-white transition-all delay-50 py-3 rounded-md ease-in-out` : 
                     `flex font-karla text-xl w-full px-5 justify-between items-center gap-2 bg-slate-800 text-white   

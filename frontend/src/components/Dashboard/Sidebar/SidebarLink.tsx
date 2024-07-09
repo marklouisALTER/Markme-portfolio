@@ -18,12 +18,12 @@ export const sidebarLink:sidebarLinkType = [
     {
         icon: <MdDashboard />,
         label: 'Dashboard',
-        path: '/dashboard',
+        path: '.',
     },
     {
         icon: <RiTodoFill />,
         label: 'Todo List',
-        path: '/todo',
+        path: './todo-list',
     },
     {
         icon: <FaCalendarAlt />,
