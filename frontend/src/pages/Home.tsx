@@ -3,18 +3,42 @@ import React from 'react'
 import profilePicture from '../assets/images/MarkmeFormal.jpeg'
 // import markme_profile from '../assets/images/markme-image.png'
 import { useThemeStore } from '../Store/ThemeManagement'
-import { BsFillSendFill } from "react-icons/bs";
 import { useActiveMailModalBtnStore } from '../Store/ActiveButton';
 import { EmailModal } from '../components/Modal/EmailModal';
+import { TypewriterEffect } from "../components/ui/typewriter-effect";
+import { BiLogoGmail } from "react-icons/bi";
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
 AOS.init();
 
 const Home:React.FC = () => {
 
     const isDark = useThemeStore(state => state.isDark)
     const { setMailModalBtnActive, isMailModalBtnActive } = useActiveMailModalBtnStore();
+
+
+    const words = [
+      {
+        text: "Mark",
+        className: 'font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'
+      },
+      {
+        text: "Louis",
+        className: 'font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'
+      },
+      {
+        text: "A.",
+        className: 'font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'
+      },
+      {
+        text: "Bernardo",
+        className: 'font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'
+      }
+      
+    ];
+
+
   return (
     <section 
       id="home" 
@@ -29,7 +53,9 @@ const Home:React.FC = () => {
                 <h3 data-aos="fade-right" className={`font-ubuntu font-medium md:text-xl text-center lg:text-start
                   ${isDark ? 'text-white': 'text-black'}`}>Hello There, I'm
                 </h3>
-                <h1 data-aos="fade-right" data-aos-duration="1000" className='font-karla font-extrabold text-4xl md:text-6xl text-center lg:text-start text-brand-primary'>Mark Louis A. Bernardo</h1>
+                {/* <h1 data-aos="fade-right" data-aos-duration="1000"> */}
+                  <TypewriterEffect words={words} data-aos="fade-right" data-aos-duration="1300" />
+                {/* </h1> */}
               </div>
               <p data-aos="fade-right" data-aos-duration="1300" className={`font-ubuntu text-xl font-medium text-center lg:text-start ${isDark ? 'text-gray-200': 'text-black'}`}>Front-End Web Developer</p>
             </div>
@@ -41,17 +67,17 @@ const Home:React.FC = () => {
             </p>
             <div className='flex items-center justify-center lg:justify-start'>
               <button 
-                data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
-                data-aos-delay="700"
+                // data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                // data-aos-delay="700"
                 onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
-                focus:ring-brand-primary px-5 py-2 border border-transparent font-semibold group rounded-xl z-[5]
-                ${isDark ? 'bg-transparent border-2 border-l-transparent hover:border-l-brand-primary hover:bg-[#1a202c] text-white': 
+                focus:ring-brand-primary px-10 py-2 border border-transparent font-semibold group rounded-md z-[5]
+                ${isDark ? 'border-2 text-xl gap-3 border-l-transparent hover:border-l-brand-primary bg-[#1a202c] text-white': 
                 'bg-brand-primary border-brand-primary hover:bg-brand-secondary hover:border-brand-secondary text-white'}`}
               >
                 {/* <span className='relative z-[10] group-hover:bg-[#1a202c]'> */}
-                  <BsFillSendFill />
-                  Message me
+                  <BiLogoGmail className='text-3xl'/>
+                  Email me
                 {/* </span> */}
                 {/* <span className={`absolute inset-0 bg-transparent transition-transform duration-300 ease-in-out
                   ${isDark ? 'hover:bg-[#1a202c] hover:translate-x-full': ''}`}></span> */}
