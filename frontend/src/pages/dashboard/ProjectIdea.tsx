@@ -1,6 +1,6 @@
 import { projectIdeaDumpData } from '@/Data/ProjectIdeaDumpData'
 import { ProjectIdeaCard } from '@/components/Card/Admin/ProjectIdeaCard';
-import { ProjectIdeaSkeleton } from '@/components/Skeleton/ProjectIdeaSkeleton';
+// import { ProjectIdeaSkeleton } from '@/components/Skeleton/ProjectIdeaSkeleton';
 import { Skeleton } from 'antd';
 
 import React, { useEffect, useState } from 'react'
