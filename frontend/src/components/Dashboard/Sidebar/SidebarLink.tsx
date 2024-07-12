@@ -1,6 +1,7 @@
 import { MdDashboard } from "react-icons/md";
 import { RiTodoFill } from "react-icons/ri";
 import { FaCalendarAlt } from "react-icons/fa";
+import { TbBulbFilled } from "react-icons/tb";
 
 export type subLinkType = {
     label: string,
@@ -28,6 +29,11 @@ export const sidebarLink:sidebarLinkType = [
     {
         icon: <FaCalendarAlt />,
         label: 'Activities',
-        path: '/sched-activity'
+        path: './sched-activity'
+    },
+    {
+        icon: <TbBulbFilled />,
+        label: 'Project Ideas',
+        path: './proj-ideas'
     }
 ]
