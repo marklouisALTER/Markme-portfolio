@@ -1,8 +1,7 @@
 import { projectIdeaDumpData } from '@/Data/ProjectIdeaDumpData'
 import { ProjectIdeaCard } from '@/components/Card/Admin/ProjectIdeaCard';
-// import { ProjectIdeaSkeleton } from '@/components/Skeleton/ProjectIdeaSkeleton';
-import { Skeleton } from 'antd';
-
+import { ProjectIdeaSkeleton } from '@/components/Skeleton/ProjectIdeaSkeleton';
+import { toast, Toaster } from 'sonner';
 import React, { useEffect, useState } from 'react'
 
 type projectIdeaDataType = {
@@ -24,25 +23,30 @@ export const ProjectIdea:React.FC = () => {
                 const result = projectIdeaDumpData;
                 setProjectIdea(result);
                 setLoading(false);
+                toast.success('Project Idea Loaded Successfully', {
+                style: {
+                    background: '#101d2e',
+                    },
+                });
             }, 2000)
         }   
 
         fetchProjectIdeaCard();
-
     },[])
 
     return (
         <section className='w-full'>
+            <Toaster richColors position="top-right" />
             <div className='flex flex-col gap-4 px-5'>
                 <h1 className='text-2xl md:text-3xl lg:text-4xl font-semibold font-karla text-white'>Project Idea</h1>
             </div>
             <div className='w-full mt-10 grid grid-cols-1 px-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
                 {loading ? (
                     <>
-                        <Skeleton active />
-                        <Skeleton active />
-                        <Skeleton active />
-                        <Skeleton active />
+                        <ProjectIdeaSkeleton />
+                        <ProjectIdeaSkeleton />
+                        <ProjectIdeaSkeleton />
+                        <ProjectIdeaSkeleton />
                     </>
                 ) : (
                     projectIdeaData?.map((item) => (

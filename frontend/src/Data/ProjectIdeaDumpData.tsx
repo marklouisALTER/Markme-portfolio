@@ -10,5 +10,6 @@ export const projectIdeaDumpData = [
         title: 'Develop a Website',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
         date: '06/23/2024',
-    }
+    },
+    
 ]
