@@ -71,7 +71,7 @@ const Home:React.FC = () => {
                 // data-aos-delay="700"
                 onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
-                focus:ring-brand-primary px-10 py-2 border border-transparent font-semibold group rounded-md z-[5]
+                focus:ring-brand-primary px-10 py-2 border border-transparent font-semibold group rounded-md z-[2]
                 ${isDark ? 'border-2 gap-3 border-l-transparent hover:border-l-brand-primary bg-[#1a202c] text-white': 
                 'bg-brand-primary border-brand-primary hover:bg-brand-secondary hover:border-brand-secondary text-white'}`}
               >
