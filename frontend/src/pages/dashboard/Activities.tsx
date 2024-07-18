@@ -3,7 +3,6 @@ import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar, ConfigProvider } from 'antd';
 import type { Dayjs } from 'dayjs';
 import { ActivityModal } from '@/components/Modal/ActivityModal';
-import { ActivitySkeleton } from '@/components/Skeleton/ActivitySkeleton';
 
 export const Activities: React.FC = () => {
     const [isCalendarClick, setIsCalendarClick] = useState(false);
