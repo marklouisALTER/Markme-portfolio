@@ -3,6 +3,7 @@ import type { BadgeProps, CalendarProps } from 'antd';
 import { Badge, Calendar, ConfigProvider } from 'antd';
 import type { Dayjs } from 'dayjs';
 import { ActivityModal } from '@/components/Modal/ActivityModal';
+import { ActivitySkeleton } from '@/components/Skeleton/ActivitySkeleton';
 
 export const Activities: React.FC = () => {
     const [isCalendarClick, setIsCalendarClick] = useState(false);
@@ -81,7 +82,8 @@ export const Activities: React.FC = () => {
                     Here's all your Schedule dates. I hope you can attend these all.
                 </h5>
                 <div className='w-full'>
-                    <div className='bg-[#1e293a] rounded-lg p-5'>
+                    <div className='bg-[#1e293a] rounded-lg mt-5'>
+                            {/* <ActivitySkeleton /> */} {/* Loading State of calendar skeleton */}
                         <Calendar
                             cellRender={cellRender}
                             onSelect={(value) => {
