@@ -1,11 +1,21 @@
 import React from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { IoMdNotifications } from "react-icons/io";
-
+import { FiMenu } from "react-icons/fi";
+import { openSidebarBtnStore } from '@/Store/OpenSidebar';
 import { IoChevronDown } from "react-icons/io5";
+
 export const Header:React.FC = () => {
+
+  const { toggleSidebar } = openSidebarBtnStore();
+
   return (
-    <header className='w-full h-[70px] flex items-center justify-end px-5 md:px-10 py-5'>
+    <header className='w-full h-[70px] flex items-center justify-between md:justify-end px-5 md:px-10 py-5'>
+        <div 
+          onClick={toggleSidebar}
+          className='md:hidden cursor-pointer text-white hover:text-brand-primary transition-all ease-in-out'>
+          <FiMenu className='text-2xl' />
+        </div>
         <div className='flex items-center gap-5'>
           <div className='p-2 hover:bg-[#101d2e] rounded-lg transition-all delay-50 ease-in-out cursor-pointer'>
             <IoMdNotifications className='text-white text-2xl'/>
