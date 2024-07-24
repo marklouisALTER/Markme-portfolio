@@ -30,16 +30,14 @@ export const Login:React.FC = () => {
             isDark ? 'bg-slate-800' : 'bg-white'
         } px-10 md:px-20 lg:px-30 xl:px-40 py-20 flex items-center justify-center`}
     >
-        <div className='absolute w-full h-full bg-slate-800/40 z-[5]'></div>
-        <img src={login_background} alt='Login' className='absolute w-full h-full object-cover'/>
-        
-        <div className='absolute p-5 px-10 left-0 w-full sm:w-[30rem] h-full z-[10] bg-slate-800/40 backdrop-blur-sm shadow-xl shadow-slate-800/20'>
-            <div className='w-full flex mt-[10rem] items-center justify-center gap-2'>
+        <div className='absolute w-[45rem] h-[45rem] bg-blue-500/30 rounded-full blur-2xl'></div>
+        <div className='py-10 px-10 w-full sm:w-[30rem] bg-slate-800/50 backdrop-blur-sm shadow-xl rounded-xl shadow-slate-800/20'>
+            <div className='w-full flex items-center justify-center gap-2'>
                 <img src={logoIcon} alt='Login' className='w-14 h-14'/>
                 <h1 className={`font-ubuntu text-3xl font-semibold ${isDark? 'text-brand-primary': 'text-brand-secondary'}`}>A R K M E</h1>
             </div>
             <div className='mt-5 text-center'>
-                <h3 className={`font-karla text-2xl font-medium ${isDark? 'text-white': 'text-brand-secondary'}`}>Sign in</h3>
+                {/* <h3 className={`font-karla text-xl font-medium ${isDark? 'text-white': 'text-brand-secondary'}`}>Welcome to markme app</h3> */}
             </div>
             <div className='mt-4'>
                 <label htmlFor='username' className={`font-karla text-lg ${isDark? 'text-gray-300': 'text-gray-700'}`}>Username</label>
