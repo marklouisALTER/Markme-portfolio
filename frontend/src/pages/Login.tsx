@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useThemeStore } from '../Store/ThemeManagement';
-import login_background from '../assets/images/picture/login_background.png'
+// import login_background from '../assets/images/picture/login_background.png'
 import logoIcon from '../assets/images/favicon.png'
 import { Checkbox } from 'antd';
 // import { useToast } from '@/components/ui/use-toast';
