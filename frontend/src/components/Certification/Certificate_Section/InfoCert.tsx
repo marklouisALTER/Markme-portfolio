@@ -8,6 +8,7 @@ import react_cert from '../../../assets/images/certificate/react_cert.jpg'
 import aws_cert from '../../../assets/images/certificate/aws_certificate.png'
 import sql_cert from '../../../assets/images/certificate/sql_cert.jpg'
 import { ClockCircleOutlined } from '@ant-design/icons';
+import { MdSwipe  } from "react-icons/md";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -150,7 +151,7 @@ export const InfoCert:React.FC = () => {
             scrollbar={{ draggable: true }}
             spaceBetween={50}
             onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)}
-            className="mySwiper w-[25rem] h-auto md:w-[35rem] lg:w-[45rem] xl:w-[55rem] rounded-md"
+            className="mySwiper w-[25rem] h-auto md:w-[35rem] lg:w-[45rem] xl:w-[55rem] rounded-md relative"
         >
             <SwiperSlide>
                 <Image 
@@ -208,6 +209,10 @@ export const InfoCert:React.FC = () => {
                     className='object-cover w-full h-full'
                 />
             </SwiperSlide>
+            <div className='absolute top-2 left-2 z-[2] rounded-xl flex items-center gap-2 bg-slate-800/70 p-2 px-4'>
+                <MdSwipe  className='text-white'/>
+                <p className='font-karla text-white'>Slide the image</p>
+            </div>
         </Swiper>
         <div className='w-[100%] px-5'>
         {

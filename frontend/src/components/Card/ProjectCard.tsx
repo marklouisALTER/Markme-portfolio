@@ -46,7 +46,7 @@ export const ProjectCard:React.FC<projectCardType> = ({project}) => {
             <Image
                 src={project.image}
                 alt={project.title}
-                className='rounded-lg w-full h-40 object-cover'
+                className='rounded-lg w-full min-h-[8rem] object-cover'
             />
             <div className='flex flex-col gap-2'>
                 <h3 className={`font-ubuntu text-sm md:text-[17px] lg:text-[18px] mb-1 md:mb-2 ${isDark ? 'text-brand-primary group-hover:text-white' : 'text-white'}`}>{project.title}</h3>
