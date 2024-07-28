@@ -10,6 +10,7 @@ const Blogs:React.FC = () => {
     const arrayData = [
         {
             id: 1,
+            delay: 100,
             title: 'SQL Data Manipulation',
             description: 'An overview of data manipulation using various functions in MySQL.',
             image_link: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5trzp90tbioneyv1xb54.png',
@@ -17,6 +18,7 @@ const Blogs:React.FC = () => {
         },
         {
             id: 2,
+            delay: 200,
             title: 'Introduction to SQL',
             description: 'Getting familar with SQL and how to use it in your applications.',
             image_link: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl3e3jcgix5sxs1fqx2n3.png',
@@ -24,6 +26,7 @@ const Blogs:React.FC = () => {
         },
         {
             id: 3,
+            delay: 300,
             title: 'SQL Aggregate Functions',
             description: 'An overview of aggregate functions in SQL and how to use them in your applications.',
             image_link: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjwghnyjv5m5dym9l0n9x.png',
@@ -51,13 +54,20 @@ const Blogs:React.FC = () => {
                 } px-10 md:px-20 lg:px-30 xl:px-40 py-20`}
             >
             <div className="flex flex-col justify-center items-center">
-                <p className={`font-ubuntu ${isDark ? 'text-gray-400': 'text-gray-500'}`}>View my latest blogs</p>
-                <h3 className={`font-ubuntu text-3xl ${isDark ? 'text-brand-primary': 'text-brand-secondary'}`}>Latest Blogs</h3>
+                <p  data-aos="fade-up"
+                    data-aos-delay="100"
+                    data-aos-anchor-placement="top-bottom" 
+                    className={`font-ubuntu ${isDark ? 'text-gray-400': 'text-gray-500'}`}>View my latest blogs</p>
+                <h3 
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="top-bottom" 
+                    className={`font-ubuntu text-3xl ${isDark ? 'text-brand-primary': 'text-brand-secondary'}`}>Latest Blogs</h3>
             </div>
 
-                <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+                <div className='w-full mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                     {arrayData.map((data, index) => (
-                        <article key={index} className='mt-5'>
+                        <article key={index} className='mt-5' data-aos="fade-right" data-aos-delay={data.delay}>
                             <div className={`cursor-pointer shadow-xl shadow-spead-xl transition-all delay-50 ease-in-out rounded-md hover:scale-105
                                 ${isDark ? 'bg-[#101d2e] text-gray-300' : 'bg-white text-gray-700'}
                                 `}>
@@ -73,8 +83,11 @@ const Blogs:React.FC = () => {
                                     <p className='font-ubuntu text-gray-400'>{data.description}</p>
                                 </div>
 
-                                <div className='flex flex-row justify-end px-5 pb-4'>
+                                <div 
+                                className='flex flex-row justify-end px-5 pb-4'>
                                     <a 
+                                        data-aos="fade-left" 
+                                        data-aos-delay={data.delay + 100}
                                         target='_blank'
                                         href={data.blog_link} 
                                         className='font-karla text-white hover:text-blue-500 transition-all delay-50 ease-in-out'
@@ -91,6 +104,8 @@ const Blogs:React.FC = () => {
                 <div className='flex flex-row justify-center items-center mt-10'>
                     <div className='flex-grow border-t border-gray-300'></div>
                     <button 
+                        data-aos="fade-left" 
+                        data-aos-delay='300'
                         onClick={() => window.open('https://dev.to/marklouisalter')}
                         className={`transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 
                         focus:ring-brand-primary px-5 py-1 mx-3 rounded-md border border-transparent 

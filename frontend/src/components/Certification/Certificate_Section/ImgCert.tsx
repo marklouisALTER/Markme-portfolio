@@ -68,7 +68,7 @@ export const ImgCert: React.FC = () => {
                 <article key={index} className={`group rounded-lg flex flex-col gap-3 items-center
                     transition-all delay-50 ease-in-out hover:cursor-pointer p-3 group hover:scale-105 shadow-xl shadow-spread-xl
                     ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>
-                     <div className='w-full flex flex-col gap-2'>
+                        <div className='w-full flex flex-col gap-2'>
                             <Image
                                 src={item.image}
                                 alt={item.title}

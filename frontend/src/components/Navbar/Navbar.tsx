@@ -91,7 +91,7 @@ const Navbar:React.FC = () => {
                         Blogs
                 </a>
                 
-                <button 
+                {/* <button 
                     data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
                     data-aos-delay="450"
                     onClick={() => window.location.href = '/login'}
@@ -101,7 +101,7 @@ const Navbar:React.FC = () => {
                     'bg-brand-primary text-white hover:bg-brand-secondary'}`}
                 >
                     Login
-                </button>
+                </button> */}
 
                 {/* <Switch 
                     size='default'
@@ -156,13 +156,13 @@ const Navbar:React.FC = () => {
                             </a>
                         </div>
                 </div>
-                    <button 
+                    {/* <button 
                         onClick={() => window.location.href = '/login'}
                         className='bg-white p-2 m-3 rounded-lg font-karla font-medium text-black hover:bg-slate-800 
                         hover:text-white hover:border-white transition-all delay-50 ease-in-out'
                     >
                         Login
-                    </button>
+                    </button> */}
             </div>
         </nav>
         </>
