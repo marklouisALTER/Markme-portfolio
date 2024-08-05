@@ -67,8 +67,8 @@ const Home:React.FC = () => {
             </p>
             <div className='flex items-center justify-center lg:justify-start'>
               <button 
-                // data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
-                // data-aos-delay="700"
+                data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="2000"
                 onClick={() => setMailModalBtnActive()}
                 className={`relative overflow-hidden transition-all delay-50 ease-in-out focus:outline-none focus:ring-2 flex items-center gap-2
                 focus:ring-brand-primary px-10 py-2 border border-transparent font-semibold group rounded-md z-[2]

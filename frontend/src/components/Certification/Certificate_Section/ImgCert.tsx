@@ -13,59 +13,74 @@ import sql_cert from '../../../assets/images/certificate/sql_cert.jpg'
 type CertificateType = {
     id: number;
     title: string;
+    delay: string;
     image: string;
 }
 
 export const ImgCert: React.FC = () => {
     const isDark = useThemeStore(state => state.isDark)
-
+    
     const data: CertificateType[] = [
         {
             id: 1,
             title: 'AWS Certified Cloud Practitioner',
+            delay: '100',
             image: aws_cert,
         },
         {
             id: 2,
             title: 'SQL for Data Science',
+            delay: '200',
             image: sql_cert,
         },
         {
             id: 3,
             title: 'Introduction to Networking',
+            delay: '300',
             image: intro_in_network_cert,
         },
         {
             id: 4,
             title: 'Networking Essentials',
+            delay: '400',
             image: networking_essential_cert,
         },
         {
             id: 5,
             title: 'JavaScript Training',
+            delay: '500',
             image: javascript_training,
         },
         {
             id: 6,
             title: 'React Certification',
+            delay: '600',
             image: react_cert,
         },
         {
             id: 7,
             title: 'Data Engineering with SQL',
+            delay: '700',
             image: data_eng_sql,
         },
         {
             id: 8,
             title: 'Backend Web Development',
+            delay: '800',
             image: backend_cert,
         },
     ]
 
+
     return (
         <section className='w-full grid grid-cols-2 mt-5 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             {data.map((item, index) => (
-                <article key={index} className={`group rounded-lg flex flex-col gap-3 items-center
+                <article 
+                    data-aos="fade-right" 
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay={item.delay}
+                    key={index} 
+                    className={`group rounded-lg flex flex-col gap-3 items-center
                     transition-all delay-50 ease-in-out hover:cursor-pointer p-3 group hover:scale-105 shadow-xl shadow-spread-xl
                     ${isDark ? 'bg-[#101d2e] hover:bg-brand-primary ' : 'bg-brand-primary hover:bg-brand-secondary'}`}>
                         <div className='w-full flex flex-col gap-2'>

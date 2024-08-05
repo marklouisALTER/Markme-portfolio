@@ -218,27 +218,50 @@ export const InfoCert:React.FC = () => {
         {
             dataSample?.data.map((data, index) => (
                 <div key={data.id} className={`${currentSlide === index ? 'block': 'hidden'}`}>
-                    <h2 className={`text-2xl font-karla font-extrabold 
+                    <h2 
+                        data-aos="fade-right" 
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="300"
+                        className={`text-2xl font-karla font-extrabold 
                         ${isDark ? 'text-brand-primary' : 'text-white'}`}>
                             {data.title}
                     </h2>
                     <div className='flex justify-between mt-2'>
-                        <h3 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.provider}</h3>
-                        <div className='flex gap-2'>
+                        <h3 
+                            data-aos="fade-right" 
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay="400"
+                            className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.provider}</h3>
+                        <div 
+                            data-aos="fade-right" 
+                            data-aos-easing="ease-in-back"
+                            data-aos-delay="400"
+                            className='flex gap-2'>
                             <ClockCircleOutlined className={`${isDark ? 'text-brand-primary' : 'text-gray-300'}`} />
                             <h4 className={`font-ubuntu md:text-lg font-medium ${isDark ? 'text-white' : 'text-gray-300'}`}>{data.date}</h4>
                         </div>
                     </div>
-                    <p className={`mt-5 font-ubuntu md:text-lg font-medium ${isDark ? 'text-gray-400' : 'text-gray-200'}`}>
+                    <p 
+                        data-aos="fade-right" 
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="500"
+                        className={`mt-5 font-ubuntu md:text-lg font-medium ${isDark ? 'text-gray-400' : 'text-gray-200'}`}>
                         {data.description}
                     </p>
-                    <p className={`mt-5 font-ubuntu md:text-lg font-medium ${isDark ? 'text-gray-400' : 'text-gray-200'}`}>
+                    <p 
+                        data-aos="fade-right" 
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="600"
+                        className={`mt-5 font-ubuntu md:text-lg font-medium ${isDark ? 'text-gray-400' : 'text-gray-200'}`}>
                         {data?.description_two}
                     </p>
                     <div className='flex items-center justify-center md:justify-end mt-5'>
                     {
                         data?.credential_link && (
                             <a 
+                                data-aos="fade-right" 
+                                data-aos-easing="ease-in-back"
+                                data-aos-delay="700"
                                 href={data.credential_link} 
                                 target='_blank' rel='noreferrer' 
                                 className={`font-ubuntu md:text-lg font-medium cursor-pointer ${isDark ? 'text-white': 'text-blue-400'}`}>
@@ -250,7 +273,7 @@ export const InfoCert:React.FC = () => {
                     </div>
                 </div>
                 
-            ))
+            ) || 'No data')
         }
     </div>
 
